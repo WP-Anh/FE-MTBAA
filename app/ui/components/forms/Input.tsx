@@ -1,5 +1,4 @@
 import { InputHTMLAttributes, forwardRef } from "react";
-import { twMerge } from "tailwind-merge";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -7,7 +6,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, label, error, ...props }, ref) => {
+  ({ label, error, ...props }, ref) => {
     return (
       <div className="w-full">
         {label && (

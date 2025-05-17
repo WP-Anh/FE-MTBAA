@@ -3,7 +3,7 @@
 import { useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Button from "@/app/ui/components/buttons/Button";
 import Input from "@/app/ui/components/forms/Input";
 import { login } from "@/app/services/auth";
@@ -12,7 +12,6 @@ import { StoreContext } from "@/app/store/StoreProvider";
 export default function LoginPage() {
   const store = useContext<any>(StoreContext);
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     email: "",
     password: "",

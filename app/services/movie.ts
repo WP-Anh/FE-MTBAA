@@ -1,11 +1,6 @@
 import { API_ENDPOINTS } from "../config/api";
 import { axiosInstance } from "../lib/api";
-import {
-  Movie,
-  MovieListResponse,
-  MovieDetailResponse,
-  MovieResponse,
-} from "../types/movie";
+import { Movie, MovieListResponse, MovieDetailResponse } from "../types/movie";
 
 interface ApiResponse {
   success: boolean;

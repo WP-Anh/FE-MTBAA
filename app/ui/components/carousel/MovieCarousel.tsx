@@ -4,7 +4,7 @@ import { Carousel, Rate } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import { chakra_petch, prompt } from "../../fontui";
-import { introUpComingMovie, upcomingMovies } from "@/app/data/movies";
+import { introUpComingMovie } from "@/app/data/movies";
 
 // Mock data - sau này sẽ được thay thế bằng API call
 

@@ -1,14 +1,35 @@
 "use client";
 import MovieCarousel from "./ui/components/carousel/MovieCarousel";
-import { movies, upcomingMovies } from "./data/movies";
 import MovieCard from "./ui/components/card/movieCard";
 import { Carousel } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
+import { Movie } from "./types/movie";
+import { getMovieList } from "./services/movie";
+import { StoreContext } from "./store/StoreProvider";
 
 export default function Home() {
+  const store = useContext<any>(StoreContext);
   const refUpComing = useRef<any>(null);
   const refOnScreen = useRef<any>(null);
+  const [movies, setMovies] = useState<Movie[]>([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response = await getMovieList();
+
+        if (response.isSuccess && response.data) {
+          store.movie.setData(response);
+          setMovies(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching movies:", error);
+        setMovies([]);
+      }
+    };
+    fetchMovies();
+  }, []);
 
   const [chooseType, setChooseType] = useState("on-screen");
 
@@ -95,7 +116,7 @@ export default function Home() {
                 ref={refOnScreen}
               >
                 {movies.map((movie) => (
-                  <MovieCard movie={movie} key={movie.id} />
+                  <MovieCard movie={movie} key={movie._id} />
                 ))}
               </Carousel>
               {/* Nút tương tác */}
@@ -127,8 +148,8 @@ export default function Home() {
                 className="h-full w-full"
                 ref={refUpComing}
               >
-                {upcomingMovies.map((movie) => (
-                  <MovieCard movie={movie} key={movie.id} />
+                {movies.map((movie) => (
+                  <MovieCard movie={movie} key={movie._id} />
                 ))}
               </Carousel>
               {/* Nút tương tác */}

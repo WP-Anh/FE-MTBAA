@@ -59,9 +59,8 @@ export default function List() {
       <div className="mt-6 grid grid-cols-4 items-center justify-between gap-y-6">
         {Array.isArray(filteredMovies) && filteredMovies.length > 0 ? (
           filteredMovies.map((movie) => (
-            <Link href={`/movies/${String(movie._id)}`}>
+            <Link href={`/movies/${String(movie._id)}`} key={movie._id}>
               <MovieCard
-                key={movie._id}
                 movie={{
                   _id: movie._id,
                   movie: movie,

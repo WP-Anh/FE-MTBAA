@@ -7,7 +7,6 @@ import { chakra_petch } from "@/app/ui/fontui";
 import { Rate, Carousel } from "antd";
 import MovieCard from "@/app/ui/components/card/movieCard";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { log } from "node:console";
 import PopUp from "@/app/ui/components/popup/popup";
 
 export default function Page({
