@@ -50,5 +50,4 @@ const StoreProvider = ({ children }: { children: React.ReactNode }) => {
     </StoreContext.Provider>
   );
 };
-
 export default StoreProvider;

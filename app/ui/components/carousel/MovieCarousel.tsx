@@ -21,10 +21,10 @@ export default function MovieCarousel() {
           className="h-full"
         >
           {introUpComingMovie.map((movie) => (
-            <div key={movie.id} className="relative h-[90vh]">
+            <div key={movie._id} className="relative h-[90vh]">
               {/* Background Image */}
               <Image
-                src={movie.poster}
+                src={movie.posterUrl}
                 alt={movie.title}
                 fill
                 className="object-cover"
@@ -59,13 +59,13 @@ export default function MovieCarousel() {
                     </p>
                     <div className="flex gap-4">
                       <Link
-                        href={`/movies/${movie.id}`}
+                        href={`/movies/${movie._id}`}
                         className="bg-red-600! hover:bg-red-700! text-white! px-8 py-3 rounded-full text-xl font-semibold transition-colors "
                       >
                         Đặt vé ngay
                       </Link>
                       <Link
-                        href={`/movies/${movie.id}/booking`}
+                        href={`/movies/${movie._id}/booking`}
                         className="bg-white! hover:bg-gray-100! text-blue-500 px-8 py-3 rounded-full text-lg font-semibold transition-colors"
                       >
                         Xem review

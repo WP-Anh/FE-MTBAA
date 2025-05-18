@@ -1,93 +1,66 @@
 export const introUpComingMovie = [
   {
-    id: 1,
+    _id: "68lecbd7177ld759f6cdf2d3",
     title: "Dune: Part Two",
-    poster: "/images/DUNE2.jpg",
-    rating: 4.5,
     description:
-      "Paul Atreides hợp nhất với người Fremen trên sa mạc Arrakis để trả thù cho những kẻ phản bội đã hủy hoại gia đình anh.",
-  },
-  {
-    id: 2,
-    title: "Deadpool và Wolverine",
-    poster: "/images/Deadpool&Wolverine.jpg",
-    rating: 4.8,
-    description:
-      "Câu chuyện về sự hồi sinh của một phụ nữ trẻ, người được một nhà khoa học tài ba hồi sinh.",
-  },
-  {
-    id: 3,
-    title: "Oppenheimer",
-    poster: "/images/Oppenheimer.avif",
-    rating: 4.7,
-    description:
-      "Câu chuyện về nhà vật lý J. Robert Oppenheimer và vai trò của ông trong việc phát triển bom nguyên tử.",
-  },
-  {
-    id: 4,
-    title: "Kung Fu Panda 4",
-    poster: "/images/KungFuPanda4.jpg",
-    rating: 4.3,
-    description:
-      "Barbie bị trục xuất khỏi Barbieland vì không hoàn hảo, và bắt đầu cuộc phiêu lưu trong thế giới thực.",
-  },
-];
-
-export const movies = [
-  {
-    id: 1,
-    title: "Dune: Part Two",
-    image: "/images/DUNE2Poster.jpg",
-    description:
-      "Paul Atreides hợp nhất với Chani và người Fremen trong cuộc chiến trả thù chống lại những kẻ âm mưu hủy diệt gia đình mình.",
-    rating: 4.8,
-    duration: "2h 46m",
-    genre: ["Khoa học viễn tưởng", "Phiêu lưu"],
+      "Paul Atreides đoàn kết với người Fremen để trả thù cho gia đình và ngăn chặn một tương lai tăm tối mà chỉ anh có thể thấy.",
     releaseDate: "2024-03-01",
+    duration: "166 phút",
+    genre: ["Khoa học viễn tưởng", "Phiêu lưu", "Hành động"],
+    director: "Denis Villeneuve",
+    cast: ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson", "Javier Bardem"],
+    posterUrl: "/images/DUNE2.jpg",
+    trailerUrl: "https://www.youtube.com/embed/Way9Dexny3w",
+    img: [
+      "https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BZDIyYjM1YzktZTk0OS00OTZlLWIyZjgtMmI1OTU3NDlkMDdhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+    ],
+    rating: 8.7,
+    price: 9.99,
   },
   {
-    id: 2,
-    title: "Kung Fu Panda 4",
-    image: "/images/KungFuPanda4Poster.webp",
-    description:
-      "Po phải đối mặt với một kẻ thù mới nguy hiểm và phải tìm kiếm sự giúp đỡ từ những người bạn cũ.",
-    rating: 4.5,
-    duration: "1h 34m",
-    genre: ["Hoạt hình", "Hài", "Phiêu lưu"],
-    releaseDate: "2024-03-08",
-  },
-  {
-    id: 3,
+    _id: "68lecbd7177ld759f6cdf2d2",
     title: "Deadpool & Wolverine",
-    image: "/images/Deadpool&WolverinePoster.jpg",
     description:
-      "Deadpool và Wolverine hợp tác trong một cuộc phiêu lưu mới đầy bất ngờ.",
-    rating: 4.7,
-    duration: "2h 15m",
-    genre: ["Hành động", "Hài", "Siêu anh hùng"],
+      "Deadpool phá vỡ không gian đa vũ trụ, hợp tác với Wolverine trong một cuộc phiêu lưu đẫm máu và hài hước để cứu thực tại.",
     releaseDate: "2024-07-26",
+    duration: "127 phút",
+    genre: ["Hành động", "Hài", "Siêu anh hùng"],
+    director: "Shawn Levy",
+    cast: ["Ryan Reynolds", "Hugh Jackman", "Emma Corrin", "Morena Baccarin"],
+    posterUrl: "/images/Deadpool&Wolverine.jpg",
+    trailerUrl: "https://www.youtube.com/embed/73_1biulkYk",
+    img: [
+      "https://m.media-amazon.com/images/M/MV5BMDExZGZkOWMtZDA0Yi00NzFiLWE0NmYtM2M1NDQyYjVlMGU5XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BOWQ0YjE0ODItZWY5Yi00YjUxLTkxYjktNDA4ODQ3Y2YxZjQ1XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+    ],
+    rating: 8.9,
+    price: 12.99,
   },
   {
-    id: 4,
-    title: "Godzilla x Kong: The New Empire",
-    image: "/images/GodzillaKong.webp",
+    _id: "68lecbd7177ld759f6cdf2d1",
+    title: "Oppenheimer",
     description:
-      "Godzilla và Kong phải hợp tác để đối mặt với một mối đe dọa khủng khiếp từ thế giới ngầm.",
-    rating: 4.3,
-    duration: "1h 55m",
-    genre: ["Hành động", "Khoa học viễn tưởng"],
-    releaseDate: "2024-03-29",
-  },
-  {
-    id: 5,
-    title: "Inside Out 2",
-    image: "/images/InsideOut2.jpg",
-    description:
-      "Joy, Sadness, Anger, Fear và Disgust đối mặt với những cảm xúc mới khi Riley bước vào tuổi dậy thì.",
-    rating: 4.6,
-    duration: "1h 45m",
-    genre: ["Hoạt hình", "Tâm lý", "Gia đình"],
-    releaseDate: "2024-06-14",
+      "Câu chuyện về J. Robert Oppenheimer, nhà vật lý lý thuyết đứng đầu Dự án Manhattan, và những xung đột đạo đức khi tạo ra bom nguyên tử.",
+    releaseDate: "2023-07-21",
+    duration: "180 phút",
+    genre: ["Tiểu sử", "Lịch sử", "Chính kịch"],
+    director: "Christopher Nolan",
+    cast: [
+      "Cillian Murphy",
+      "Emily Blunt",
+      "Matt Damon",
+      "Robert Downey Jr.",
+      "Florence Pugh",
+    ],
+    posterUrl: "/images/Oppenheimer.avif",
+    trailerUrl: "https://www.youtube.com/embed/uYPbbksJxIg",
+    img: [
+      "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BOTFmMzFmOWEtNGEyMC00YWY4LTg1YjQtZTk2ZWE0YzNkZmFmXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
+    ],
+    rating: 8.5,
+    price: 10.99,
   },
 ];
 

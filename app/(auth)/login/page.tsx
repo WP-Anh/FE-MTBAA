@@ -50,7 +50,9 @@ export default function LoginPage() {
       }
 
       // Chuyển hướng về trang chủ
-      router.push("/");
+      console.log(response);
+
+      // router.push("/");
     } else {
       // Log error if login failed
       console.error("Login failed:", response.message);

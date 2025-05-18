@@ -7,7 +7,7 @@ import { chakra_petch } from "@/app/ui/fontui";
 import { Rate, Carousel } from "antd";
 import MovieCard from "@/app/ui/components/card/movieCard";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import PopUp from "@/app/ui/components/popup/popup";
+import Link from "next/link";
 
 export default function Page({
   params,
@@ -83,13 +83,11 @@ export default function Page({
 
   return (
     <div className="mx-auto relative py-6">
-      <PopUp />
-      <div className="w-[95%] h-[85vh] border mx-auto">
+      <div className="w-[95%] h-[85vh] mx-auto">
         <iframe
           width="100%"
           height="100%"
-          // src={movie.trailerUrl}
-          src="https://www.youtube.com/embed/ULU1S6oVzRI"
+          src={movie.trailerUrl}
           title={movie.title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -135,9 +133,12 @@ export default function Page({
           </div>
         </div>
         <div className="col-span-1 w-[90%] shadow-2xl flex items-center justify-center">
-          <button className="m-auto w-fit bg-indigo-600 text-white text-2xl px-10 py-3 rounded-xl">
+          <Link
+            href={`/buy-ticket/${movie._id}`}
+            className="m-auto w-fit bg-indigo-600 text-white text-2xl px-10 py-3 rounded-xl"
+          >
             Đặt vé ngay
-          </button>
+          </Link>
         </div>
       </div>
       <div className="w-[95%] mx-auto mt-10">

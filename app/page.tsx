@@ -7,6 +7,7 @@ import { useRef, useState, useEffect, useContext } from "react";
 import { Movie } from "./types/movie";
 import { getMovieList } from "./services/movie";
 import { StoreContext } from "./store/StoreProvider";
+import Link from "next/link";
 
 export default function Home() {
   const store = useContext<any>(StoreContext);
@@ -116,7 +117,26 @@ export default function Home() {
                 ref={refOnScreen}
               >
                 {movies.map((movie) => (
-                  <MovieCard movie={movie} key={movie._id} />
+                  <Link href={`/movies/${String(movie._id)}`} key={movie._id}>
+                    <MovieCard
+                      movie={{
+                        _id: movie._id,
+                        movie: movie,
+                        title: movie.title,
+                        posterUrl: movie.posterUrl,
+                        description: movie.description,
+                        rating: movie.rating,
+                        duration: movie.duration,
+                        genre: movie.genre,
+                        releaseDate: movie.releaseDate,
+                        director: movie.director,
+                        cast: movie.cast,
+                        img: movie.img,
+                        trailerUrl: movie.trailerUrl,
+                        price: movie.price,
+                      }}
+                    />
+                  </Link>
                 ))}
               </Carousel>
               {/* Nút tương tác */}
